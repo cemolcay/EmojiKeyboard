@@ -6,7 +6,7 @@ Emoji data read from `emoji.json` file inside project.
 
 Demo
 ----
-![alt tag]()
+![alt tag](https://raw.githubusercontent.com/cemolcay/EmojiKeyboard/master/Demo.gif)
 
 Install
 ----
