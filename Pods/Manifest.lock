@@ -1,0 +1,12 @@
+PODS:
+  - HorizontalFloatingHeaderLayout (1.0.0)
+
+DEPENDENCIES:
+  - HorizontalFloatingHeaderLayout
+
+SPEC CHECKSUMS:
+  HorizontalFloatingHeaderLayout: b94c61cfb2ea7803db130603303e8bfcabd50091
+
+PODFILE CHECKSUM: d0dac087903fa6eeb7eada050b94c86484fee7cf
+
+COCOAPODS: 1.1.0.beta.1

@@ -1,0 +1,652 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		472C17B4714D73A46752F1102599A7EC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2A6FF208CEC4C2861F1E9D42D651453 /* Foundation.framework */; };
+		5A3D464439C2A4F07951CC496E8FC511 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E86668F20F252C440D1015B816BE59C5 /* UIKit.framework */; };
+		5AD18337A19E5B4C222B6DCAC678996A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2A6FF208CEC4C2861F1E9D42D651453 /* Foundation.framework */; };
+		717DAD17EBE553FF6E363C26CE74FD99 /* Pods-EmojiKeyboard-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F6477CF6347D23F97961A3A3CCB02024 /* Pods-EmojiKeyboard-dummy.m */; };
+		93822BE74593CC8F4F1BD1DB73212F42 /* HorizontalFloatingHeaderLayout-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A1DCA19A508FC9CA00F5492AC592D244 /* HorizontalFloatingHeaderLayout-dummy.m */; };
+		ACBA1CFCCE086552CB4E99CD61D3EBC9 /* storyboard.png in Resources */ = {isa = PBXBuildFile; fileRef = 7745CBBE850FA7670DF3080B17C942A7 /* storyboard.png */; };
+		C76BE2B503E629048E5BA3C481B65BF4 /* HorizontalFloatingHeaderLayout.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 28641CFC2E98BA5920063049F574763C /* HorizontalFloatingHeaderLayout.bundle */; };
+		D0EAF9667C8AF9A24649803485178DEC /* HorizontalFloatingHeaderLayout-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 564F6D8484FBE09FEEE4978EF0E82ADE /* HorizontalFloatingHeaderLayout-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E1B2A24FA87C2C8698C04F8739E1AA33 /* HorizontalFloatingHeaderLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794CF6E93019897BDA794936CC8F2395 /* HorizontalFloatingHeaderLayout.swift */; };
+		F39B5A432D398E34B4C11D3755891A53 /* Pods-EmojiKeyboard-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C1E45922ABE5760803166606EADA5E98 /* Pods-EmojiKeyboard-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		04BC25B3DBB9CED2E57370DF311219BF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BCB6B915FC9968FD2FCE73D176533537;
+			remoteInfo = HorizontalFloatingHeaderLayout;
+		};
+		45D5F4166295B103357369FC9FE65E96 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 14DDB52215407C6BCE125A159E108D16;
+			remoteInfo = "HorizontalFloatingHeaderLayout-HorizontalFloatingHeaderLayout";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0F3206B6009115B728A5803625DE507F /* HorizontalFloatingHeaderLayout.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = HorizontalFloatingHeaderLayout.xcconfig; sourceTree = "<group>"; };
+		180950F4FACAFD1E9311ADA931B56940 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		26549F124EB81D8F1F56615D60E59600 /* HorizontalFloatingHeaderLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HorizontalFloatingHeaderLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		28641CFC2E98BA5920063049F574763C /* HorizontalFloatingHeaderLayout.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HorizontalFloatingHeaderLayout.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B906C6B2071007A0990C5058B14F73C /* Pods-EmojiKeyboard.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EmojiKeyboard.debug.xcconfig"; sourceTree = "<group>"; };
+		3E517A4BC9A8E18A6B39029788C6C881 /* Pods-EmojiKeyboard-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-EmojiKeyboard-frameworks.sh"; sourceTree = "<group>"; };
+		462A56D5922086511B65253B376D8AD6 /* HorizontalFloatingHeaderLayout-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HorizontalFloatingHeaderLayout-prefix.pch"; sourceTree = "<group>"; };
+		532B018BA2BB1FEDAE8A51D7E0DA0C53 /* Pods-EmojiKeyboard-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-EmojiKeyboard-resources.sh"; sourceTree = "<group>"; };
+		5362FE33FDDEB04CDA1FE88E828A099C /* Pods-EmojiKeyboard-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-EmojiKeyboard-acknowledgements.plist"; sourceTree = "<group>"; };
+		564F6D8484FBE09FEEE4978EF0E82ADE /* HorizontalFloatingHeaderLayout-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HorizontalFloatingHeaderLayout-umbrella.h"; sourceTree = "<group>"; };
+		76E3AFD2AD2293697259D8791EA502DE /* Pods_EmojiKeyboard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EmojiKeyboard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7745CBBE850FA7670DF3080B17C942A7 /* storyboard.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = storyboard.png; path = Pod/Assets/storyboard.png; sourceTree = "<group>"; };
+		794CF6E93019897BDA794936CC8F2395 /* HorizontalFloatingHeaderLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HorizontalFloatingHeaderLayout.swift; path = Pod/Classes/HorizontalFloatingHeaderLayout.swift; sourceTree = "<group>"; };
+		7EA46AA282B7EB2C21CCBE667C30AFC3 /* Pods-EmojiKeyboard.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-EmojiKeyboard.modulemap"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		98F171672EFD2D1453BB7E06D1629545 /* ResourceBundle-HorizontalFloatingHeaderLayout-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-HorizontalFloatingHeaderLayout-Info.plist"; sourceTree = "<group>"; };
+		A1DCA19A508FC9CA00F5492AC592D244 /* HorizontalFloatingHeaderLayout-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "HorizontalFloatingHeaderLayout-dummy.m"; sourceTree = "<group>"; };
+		A2A6FF208CEC4C2861F1E9D42D651453 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		BCDE21EC52F00E8C0F3D9D90D31E5080 /* Pods-EmojiKeyboard-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-EmojiKeyboard-acknowledgements.markdown"; sourceTree = "<group>"; };
+		C1E45922ABE5760803166606EADA5E98 /* Pods-EmojiKeyboard-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-EmojiKeyboard-umbrella.h"; sourceTree = "<group>"; };
+		C36E5281707233895A5B88A2B6774395 /* HorizontalFloatingHeaderLayout.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = HorizontalFloatingHeaderLayout.modulemap; sourceTree = "<group>"; };
+		CE7511D3E78D34292C98145CE944471C /* Pods-EmojiKeyboard.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EmojiKeyboard.release.xcconfig"; sourceTree = "<group>"; };
+		E86668F20F252C440D1015B816BE59C5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		F6477CF6347D23F97961A3A3CCB02024 /* Pods-EmojiKeyboard-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-EmojiKeyboard-dummy.m"; sourceTree = "<group>"; };
+		F6F8A545A9740B829794914A0A3A7B8A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5294F056F55ECCAD9DC6F47F9304E56E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		691C9E903FF6E0A8986EAF363C1FC110 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				472C17B4714D73A46752F1102599A7EC /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7123AC45364A05BDAC11A9B4EA2C1539 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5AD18337A19E5B4C222B6DCAC678996A /* Foundation.framework in Frameworks */,
+				5A3D464439C2A4F07951CC496E8FC511 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1285D9C050493F9ECC69AD5123070C04 /* HorizontalFloatingHeaderLayout */ = {
+			isa = PBXGroup;
+			children = (
+				794CF6E93019897BDA794936CC8F2395 /* HorizontalFloatingHeaderLayout.swift */,
+				1B6B9BF4F51090AB13C411E2EC5E4E81 /* Resources */,
+				F1E0E3091DDBDB9AC71701C315B03C1C /* Support Files */,
+			);
+			path = HorizontalFloatingHeaderLayout;
+			sourceTree = "<group>";
+		};
+		17AB981F258F858731E457BCFB5FDC0E /* Pods-EmojiKeyboard */ = {
+			isa = PBXGroup;
+			children = (
+				180950F4FACAFD1E9311ADA931B56940 /* Info.plist */,
+				7EA46AA282B7EB2C21CCBE667C30AFC3 /* Pods-EmojiKeyboard.modulemap */,
+				BCDE21EC52F00E8C0F3D9D90D31E5080 /* Pods-EmojiKeyboard-acknowledgements.markdown */,
+				5362FE33FDDEB04CDA1FE88E828A099C /* Pods-EmojiKeyboard-acknowledgements.plist */,
+				F6477CF6347D23F97961A3A3CCB02024 /* Pods-EmojiKeyboard-dummy.m */,
+				3E517A4BC9A8E18A6B39029788C6C881 /* Pods-EmojiKeyboard-frameworks.sh */,
+				532B018BA2BB1FEDAE8A51D7E0DA0C53 /* Pods-EmojiKeyboard-resources.sh */,
+				C1E45922ABE5760803166606EADA5E98 /* Pods-EmojiKeyboard-umbrella.h */,
+				2B906C6B2071007A0990C5058B14F73C /* Pods-EmojiKeyboard.debug.xcconfig */,
+				CE7511D3E78D34292C98145CE944471C /* Pods-EmojiKeyboard.release.xcconfig */,
+			);
+			name = "Pods-EmojiKeyboard";
+			path = "Target Support Files/Pods-EmojiKeyboard";
+			sourceTree = "<group>";
+		};
+		1B6B9BF4F51090AB13C411E2EC5E4E81 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7745CBBE850FA7670DF3080B17C942A7 /* storyboard.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		1F9543E46840E722B2C3FA26C60CFFC8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				28641CFC2E98BA5920063049F574763C /* HorizontalFloatingHeaderLayout.bundle */,
+				26549F124EB81D8F1F56615D60E59600 /* HorizontalFloatingHeaderLayout.framework */,
+				76E3AFD2AD2293697259D8791EA502DE /* Pods_EmojiKeyboard.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F302CD3B306AF1ED96B9AF31FCDBC26C /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
+				F6E45CA613776786C50DD4B5F23814DA /* Pods */,
+				1F9543E46840E722B2C3FA26C60CFFC8 /* Products */,
+				BAE7D5D2BA342970D90191F235756604 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		BAE7D5D2BA342970D90191F235756604 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				17AB981F258F858731E457BCFB5FDC0E /* Pods-EmojiKeyboard */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		F1E0E3091DDBDB9AC71701C315B03C1C /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				C36E5281707233895A5B88A2B6774395 /* HorizontalFloatingHeaderLayout.modulemap */,
+				0F3206B6009115B728A5803625DE507F /* HorizontalFloatingHeaderLayout.xcconfig */,
+				A1DCA19A508FC9CA00F5492AC592D244 /* HorizontalFloatingHeaderLayout-dummy.m */,
+				462A56D5922086511B65253B376D8AD6 /* HorizontalFloatingHeaderLayout-prefix.pch */,
+				564F6D8484FBE09FEEE4978EF0E82ADE /* HorizontalFloatingHeaderLayout-umbrella.h */,
+				F6F8A545A9740B829794914A0A3A7B8A /* Info.plist */,
+				98F171672EFD2D1453BB7E06D1629545 /* ResourceBundle-HorizontalFloatingHeaderLayout-Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/HorizontalFloatingHeaderLayout";
+			sourceTree = "<group>";
+		};
+		F302CD3B306AF1ED96B9AF31FCDBC26C /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				A2A6FF208CEC4C2861F1E9D42D651453 /* Foundation.framework */,
+				E86668F20F252C440D1015B816BE59C5 /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		F6E45CA613776786C50DD4B5F23814DA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1285D9C050493F9ECC69AD5123070C04 /* HorizontalFloatingHeaderLayout */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		0B208AC3DB67AE5759B40E0C503BC614 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0EAF9667C8AF9A24649803485178DEC /* HorizontalFloatingHeaderLayout-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A2D7C7D4AC35DC23605A847EBA08A5FE /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F39B5A432D398E34B4C11D3755891A53 /* Pods-EmojiKeyboard-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		14DDB52215407C6BCE125A159E108D16 /* HorizontalFloatingHeaderLayout-HorizontalFloatingHeaderLayout */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DBAA07A42114384F789D5B886FDB8A03 /* Build configuration list for PBXNativeTarget "HorizontalFloatingHeaderLayout-HorizontalFloatingHeaderLayout" */;
+			buildPhases = (
+				733D8DB5812F4CBDC58C031C9B29528D /* Sources */,
+				5294F056F55ECCAD9DC6F47F9304E56E /* Frameworks */,
+				9AF3B8E45DD643EC525D294190646013 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "HorizontalFloatingHeaderLayout-HorizontalFloatingHeaderLayout";
+			productName = "HorizontalFloatingHeaderLayout-HorizontalFloatingHeaderLayout";
+			productReference = 28641CFC2E98BA5920063049F574763C /* HorizontalFloatingHeaderLayout.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+		742111DC81EFD780FDE0E7FA7587D43E /* Pods-EmojiKeyboard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 86F113639CAA1F129864A2CD70824C3D /* Build configuration list for PBXNativeTarget "Pods-EmojiKeyboard" */;
+			buildPhases = (
+				8C6BE02F64268D631141F7C9BB0A7EDE /* Sources */,
+				691C9E903FF6E0A8986EAF363C1FC110 /* Frameworks */,
+				A2D7C7D4AC35DC23605A847EBA08A5FE /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				75028A1655D1ED841DB6D90713CD8B2D /* PBXTargetDependency */,
+			);
+			name = "Pods-EmojiKeyboard";
+			productName = "Pods-EmojiKeyboard";
+			productReference = 76E3AFD2AD2293697259D8791EA502DE /* Pods_EmojiKeyboard.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		BCB6B915FC9968FD2FCE73D176533537 /* HorizontalFloatingHeaderLayout */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DBDCA87BD754512EF24B4708674C2AF5 /* Build configuration list for PBXNativeTarget "HorizontalFloatingHeaderLayout" */;
+			buildPhases = (
+				540667A339A74D4A408545260DBC317D /* Sources */,
+				7123AC45364A05BDAC11A9B4EA2C1539 /* Frameworks */,
+				4D74C343ECC0B6C4EF61CDFDDB0EFE12 /* Resources */,
+				0B208AC3DB67AE5759B40E0C503BC614 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4C71DFB95DFE8342839C0A76D886CF0C /* PBXTargetDependency */,
+			);
+			name = HorizontalFloatingHeaderLayout;
+			productName = HorizontalFloatingHeaderLayout;
+			productReference = 26549F124EB81D8F1F56615D60E59600 /* HorizontalFloatingHeaderLayout.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 1F9543E46840E722B2C3FA26C60CFFC8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BCB6B915FC9968FD2FCE73D176533537 /* HorizontalFloatingHeaderLayout */,
+				14DDB52215407C6BCE125A159E108D16 /* HorizontalFloatingHeaderLayout-HorizontalFloatingHeaderLayout */,
+				742111DC81EFD780FDE0E7FA7587D43E /* Pods-EmojiKeyboard */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4D74C343ECC0B6C4EF61CDFDDB0EFE12 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C76BE2B503E629048E5BA3C481B65BF4 /* HorizontalFloatingHeaderLayout.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9AF3B8E45DD643EC525D294190646013 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ACBA1CFCCE086552CB4E99CD61D3EBC9 /* storyboard.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		540667A339A74D4A408545260DBC317D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93822BE74593CC8F4F1BD1DB73212F42 /* HorizontalFloatingHeaderLayout-dummy.m in Sources */,
+				E1B2A24FA87C2C8698C04F8739E1AA33 /* HorizontalFloatingHeaderLayout.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		733D8DB5812F4CBDC58C031C9B29528D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C6BE02F64268D631141F7C9BB0A7EDE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				717DAD17EBE553FF6E363C26CE74FD99 /* Pods-EmojiKeyboard-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4C71DFB95DFE8342839C0A76D886CF0C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "HorizontalFloatingHeaderLayout-HorizontalFloatingHeaderLayout";
+			target = 14DDB52215407C6BCE125A159E108D16 /* HorizontalFloatingHeaderLayout-HorizontalFloatingHeaderLayout */;
+			targetProxy = 45D5F4166295B103357369FC9FE65E96 /* PBXContainerItemProxy */;
+		};
+		75028A1655D1ED841DB6D90713CD8B2D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = HorizontalFloatingHeaderLayout;
+			target = BCB6B915FC9968FD2FCE73D176533537 /* HorizontalFloatingHeaderLayout */;
+			targetProxy = 04BC25B3DBB9CED2E57370DF311219BF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		13E96A645A77DAD1FD4F541F18F5DDBF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		44314D153ECDA14F0F91399462976062 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0F3206B6009115B728A5803625DE507F /* HorizontalFloatingHeaderLayout.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/HorizontalFloatingHeaderLayout/HorizontalFloatingHeaderLayout-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/HorizontalFloatingHeaderLayout/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/HorizontalFloatingHeaderLayout/HorizontalFloatingHeaderLayout.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = HorizontalFloatingHeaderLayout;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		44F5ED5D27943F451B9F0EE090871493 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE7511D3E78D34292C98145CE944471C /* Pods-EmojiKeyboard.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-EmojiKeyboard/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-EmojiKeyboard/Pods-EmojiKeyboard.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_EmojiKeyboard;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		525F8F7DBC52520AC51722DCB135F99C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2B906C6B2071007A0990C5058B14F73C /* Pods-EmojiKeyboard.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-EmojiKeyboard/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-EmojiKeyboard/Pods-EmojiKeyboard.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_EmojiKeyboard;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		816EBE16330ED2206004AD91B16CE251 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0F3206B6009115B728A5803625DE507F /* HorizontalFloatingHeaderLayout.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/HorizontalFloatingHeaderLayout";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/HorizontalFloatingHeaderLayout/ResourceBundle-HorizontalFloatingHeaderLayout-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = HorizontalFloatingHeaderLayout;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		862AF3139CD84E18D34FAF2F43CD0DA6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BB956C9C0CF8D7DF710B5C28C834B316 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0F3206B6009115B728A5803625DE507F /* HorizontalFloatingHeaderLayout.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/HorizontalFloatingHeaderLayout/HorizontalFloatingHeaderLayout-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/HorizontalFloatingHeaderLayout/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/HorizontalFloatingHeaderLayout/HorizontalFloatingHeaderLayout.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = HorizontalFloatingHeaderLayout;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D743645FCD644C0843705DD3525A07ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0F3206B6009115B728A5803625DE507F /* HorizontalFloatingHeaderLayout.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/HorizontalFloatingHeaderLayout";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/HorizontalFloatingHeaderLayout/ResourceBundle-HorizontalFloatingHeaderLayout-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = HorizontalFloatingHeaderLayout;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				13E96A645A77DAD1FD4F541F18F5DDBF /* Debug */,
+				862AF3139CD84E18D34FAF2F43CD0DA6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		86F113639CAA1F129864A2CD70824C3D /* Build configuration list for PBXNativeTarget "Pods-EmojiKeyboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				525F8F7DBC52520AC51722DCB135F99C /* Debug */,
+				44F5ED5D27943F451B9F0EE090871493 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DBAA07A42114384F789D5B886FDB8A03 /* Build configuration list for PBXNativeTarget "HorizontalFloatingHeaderLayout-HorizontalFloatingHeaderLayout" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				816EBE16330ED2206004AD91B16CE251 /* Debug */,
+				D743645FCD644C0843705DD3525A07ED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DBDCA87BD754512EF24B4708674C2AF5 /* Build configuration list for PBXNativeTarget "HorizontalFloatingHeaderLayout" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BB956C9C0CF8D7DF710B5C28C834B316 /* Debug */,
+				44314D153ECDA14F0F91399462976062 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

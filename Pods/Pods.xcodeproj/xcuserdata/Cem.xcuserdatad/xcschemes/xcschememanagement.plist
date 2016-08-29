@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>HorizontalFloatingHeaderLayout-HorizontalFloatingHeaderLayout.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>HorizontalFloatingHeaderLayout.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-EmojiKeyboard.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>14DDB52215407C6BCE125A159E108D16</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>742111DC81EFD780FDE0E7FA7587D43E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BCB6B915FC9968FD2FCE73D176533537</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>
