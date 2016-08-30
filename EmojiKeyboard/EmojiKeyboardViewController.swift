@@ -91,8 +91,6 @@ protocol EmojiKeyboardViewControllerDelegate: class {
 class EmojiKeyboardViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, HorizontalFloatingHeaderLayoutDelegate, UICollectionViewDelegateFlowLayout {
   @IBOutlet weak var collectionView: UICollectionView?
   @IBOutlet weak var horizontalFloatingFlowLayout: HorizontalFloatingHeaderLayout?
-
-  private let dataSource = EmojiDataSource()
   weak var delegate: EmojiKeyboardViewControllerDelegate?
 
   override func viewDidLoad() {
@@ -130,11 +128,11 @@ class EmojiKeyboardViewController: UIViewController, UICollectionViewDelegate, U
 
   // MARK: UICollectionViewDataSource
   func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
-    return EmojiCategory.all.count
+    return EmojiCategories.all.count
   }
 
   func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-    return dataSource[EmojiCategory.all[section]].count
+    return EmojiDataSource.shared[EmojiCategories.all[section]].count
   }
 
   func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
@@ -142,7 +140,7 @@ class EmojiKeyboardViewController: UIViewController, UICollectionViewDelegate, U
       EmojiCollectionViewCell.cellReuseIdentifier,
       forIndexPath: indexPath) as! EmojiCollectionViewCell
 
-    let emoji = dataSource[EmojiCategory.all[indexPath.section]][indexPath.item]
+    let emoji = EmojiDataSource.shared[EmojiCategories.all[indexPath.section]][indexPath.item]
     cell.emojiLabel?.text = "\(emoji)"
 
     return cell
@@ -152,7 +150,7 @@ class EmojiKeyboardViewController: UIViewController, UICollectionViewDelegate, U
   func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
     collectionView.deselectItemAtIndexPath(indexPath, animated: true)
 
-    let emoji = dataSource[EmojiCategory.all[indexPath.section]][indexPath.item]
+    let emoji = EmojiDataSource.shared[EmojiCategories.all[indexPath.section]][indexPath.item]
     delegate?.emojiKeyboardViewController(self, didPress: emoji)
   }
 
@@ -162,7 +160,7 @@ class EmojiKeyboardViewController: UIViewController, UICollectionViewDelegate, U
       withReuseIdentifier: EmojiCollectionViewHeader.headerReuseIdentifier,
       forIndexPath: indexPath) as! EmojiCollectionViewHeader
 
-    let category = EmojiCategory.all[indexPath.section].rawValue
+    let category = EmojiCategories.all[indexPath.section].rawValue
     header.titleLabel?.text = category
 
     return header
@@ -170,7 +168,7 @@ class EmojiKeyboardViewController: UIViewController, UICollectionViewDelegate, U
 
   // MARK: UICollectionViewDelegateFlowLayout
   func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-    let category = EmojiCategory.all[section].rawValue
+    let category = EmojiCategories.all[section].rawValue
     return category.getSizeWithFont(font: UIFont.systemFontOfSize(15))
   }
 

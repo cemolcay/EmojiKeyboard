@@ -11,31 +11,54 @@
 
 import UIKit
 
-public enum EmojiCategory: String {
+public enum EmojiCategories: String {
   case people = "People"
   case nature = "Nature"
   case objects = "Objects"
   case places = "Places"
   case symbols = "Symbols"
 
-  public static let all: [EmojiCategory] = [
+  public static let all: [EmojiCategories] = [
     .people, .nature, .objects, .places, .symbols
   ]
 }
 
+public class EmojiItem {
+  public let rawValue: String // UTF8 representation of emoji
+  public var description: String? // Tags or keywords for emoji if provided in data file
+
+  public init(rawValue: String) {
+    self.rawValue = rawValue
+  }
+}
+
 public class EmojiDataSource {
-  private var emojis = [AnyObject]()
+  public static let shared = EmojiDataSource()
+  private var dataSource = [String: [EmojiItem]]()
 
   public init() {
     guard let emojiDataFileUrl = NSBundle.mainBundle().URLForResource("emoji", withExtension: "json"),
       let emojiData = NSData(contentsOfURL: emojiDataFileUrl),
-      let emojiJSON = try? NSJSONSerialization.JSONObjectWithData(emojiData, options: .MutableContainers) as? [AnyObject]
+      let emojiJSON = try? NSJSONSerialization.JSONObjectWithData(emojiData, options: .MutableContainers) as? [AnyObject],
+      let json = emojiJSON
      else { return }
 
-    emojis = emojiJSON ?? []
+    for emojiCategory in json {
+      guard let emojiCategory = emojiCategory as? [String: AnyObject],
+        let title = emojiCategory["Title"] as? String,
+        let data = emojiCategory["Data"] as? String
+        else { continue }
+
+      var items = [EmojiItem]()
+      for item in data.componentsSeparatedByString(",") {
+        items.append(EmojiItem(rawValue: item))
+      }
+
+      dataSource[title] = items
+    }
   }
 
-  public subscript (category: EmojiCategory) -> [String] {
-    return ((emojis.filter({ (($0 as? [String: AnyObject])?["Title"] as? String) == category.rawValue }).first as? [String: AnyObject])?["Data"] as? String)?.componentsSeparatedByString(",") ?? []
+  public subscript(category: EmojiCategories) -> [String] {
+    return dataSource[category.rawValue]?.flatMap({ $0.rawValue }) ?? []
   }
 }
