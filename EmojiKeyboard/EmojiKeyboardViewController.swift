@@ -10,19 +10,19 @@ import UIKit
 import HorizontalFloatingHeaderLayout
 
 extension NSString {
-  func getSizeWithFont (width: CGFloat = .max, height: CGFloat = .max, font: UIFont) -> CGSize {
-    return boundingRectWithSize(
-      CGSize(width: width, height: height),
-      options: .UsesLineFragmentOrigin,
+  func getSizeWithFont (width: CGFloat = .greatestFiniteMagnitude, height: CGFloat = .greatestFiniteMagnitude, font: UIFont) -> CGSize {
+    return boundingRect(
+      with: CGSize(width: width, height: height),
+      options: .usesLineFragmentOrigin,
       attributes: [NSFontAttributeName: font],
       context: nil).size
   }
 }
 
 extension String {
-  func getSizeWithFont (width: CGFloat = .max, height: CGFloat = .max, font: UIFont) -> CGSize {
+  func getSizeWithFont (width: CGFloat = .greatestFiniteMagnitude, height: CGFloat = .greatestFiniteMagnitude, font: UIFont) -> CGSize {
     return (self as NSString).getSizeWithFont(
-      width,
+      width: width,
       height: height,
       font: font)
   }
@@ -44,15 +44,15 @@ class EmojiCollectionViewCell: UICollectionViewCell {
 
   private func commonInit() {
     emojiLabel = UILabel(frame: frame)
-    emojiLabel?.textColor = UIColor.blackColor()
+    emojiLabel?.textColor = .black
     emojiLabel?.font = UIFont(name: "AppleColorEmoji", size: 15)!
-    emojiLabel?.textAlignment = .Center
+    emojiLabel?.textAlignment = .center
     contentView.addSubview(emojiLabel!)
     emojiLabel?.translatesAutoresizingMaskIntoConstraints = false
-    emojiLabel?.leftAnchor.constraintEqualToAnchor(contentView.leftAnchor).active = true
-    emojiLabel?.rightAnchor.constraintEqualToAnchor(contentView.rightAnchor).active = true
-    emojiLabel?.topAnchor.constraintEqualToAnchor(contentView.topAnchor).active = true
-    emojiLabel?.bottomAnchor.constraintEqualToAnchor(contentView.bottomAnchor).active = true
+    emojiLabel?.leftAnchor.constraint(equalTo: contentView.leftAnchor).isActive = true
+    emojiLabel?.rightAnchor.constraint(equalTo: contentView.rightAnchor).isActive = true
+    emojiLabel?.topAnchor.constraint(equalTo: contentView.topAnchor).isActive = true
+    emojiLabel?.bottomAnchor.constraint(equalTo: contentView.bottomAnchor).isActive = true
   }
 }
 
@@ -72,20 +72,20 @@ class EmojiCollectionViewHeader: UICollectionReusableView {
 
   private func commonInit() {
     titleLabel = UILabel(frame: frame)
-    titleLabel?.textColor = UIColor.blackColor()
-    titleLabel?.font = UIFont.systemFontOfSize(15)
-    titleLabel?.textAlignment = .Center
+    titleLabel?.textColor = .black
+    titleLabel?.font = UIFont.systemFont(ofSize: 15)
+    titleLabel?.textAlignment = .center
     addSubview(titleLabel!)
     titleLabel?.translatesAutoresizingMaskIntoConstraints = false
-    titleLabel?.leftAnchor.constraintEqualToAnchor(leftAnchor).active = true
-    titleLabel?.rightAnchor.constraintEqualToAnchor(rightAnchor).active = true
-    titleLabel?.topAnchor.constraintEqualToAnchor(topAnchor).active = true
-    titleLabel?.bottomAnchor.constraintEqualToAnchor(bottomAnchor).active = true
+    titleLabel?.leftAnchor.constraint(equalTo: leftAnchor).isActive = true
+    titleLabel?.rightAnchor.constraint(equalTo: rightAnchor).isActive = true
+    titleLabel?.topAnchor.constraint(equalTo: topAnchor).isActive = true
+    titleLabel?.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
   }
 }
 
 protocol EmojiKeyboardViewControllerDelegate: class {
-  func emojiKeyboardViewController(emojiKeyboardViewContorller: EmojiKeyboardViewController, didPress emoji: String)
+  func emojiKeyboardViewController(_ emojiKeyboardViewContorller: EmojiKeyboardViewController, didPress emoji: String)
 }
 
 class EmojiKeyboardViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, HorizontalFloatingHeaderLayoutDelegate, UICollectionViewDelegateFlowLayout {
@@ -102,10 +102,10 @@ class EmojiKeyboardViewController: UIViewController, UICollectionViewDelegate, U
       collectionView?.dataSource = self
       collectionView?.delegate = self
       view.addSubview(collectionView!)
-      collectionView?.leftAnchor.constraintEqualToAnchor(view.leftAnchor).active = true
-      collectionView?.rightAnchor.constraintEqualToAnchor(view.rightAnchor).active = true
-      collectionView?.topAnchor.constraintEqualToAnchor(view.topAnchor).active = true
-      collectionView?.bottomAnchor.constraintEqualToAnchor(view.bottomAnchor).active = true
+      collectionView?.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
+      collectionView?.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
+      collectionView?.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+      collectionView?.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
     }
 
     // Setup Flow Layout
@@ -115,30 +115,30 @@ class EmojiKeyboardViewController: UIViewController, UICollectionViewDelegate, U
     }
 
     // Register Cell
-    collectionView?.registerClass(
+    collectionView?.register(
       EmojiCollectionViewCell.self,
       forCellWithReuseIdentifier: EmojiCollectionViewCell.cellReuseIdentifier)
 
     // Register Header
-    collectionView?.registerClass(
+    collectionView?.register(
       EmojiCollectionViewHeader.self,
       forSupplementaryViewOfKind: UICollectionElementKindSectionHeader,
       withReuseIdentifier: EmojiCollectionViewHeader.headerReuseIdentifier)
   }
 
   // MARK: UICollectionViewDataSource
-  func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+  func numberOfSections(in collectionView: UICollectionView) -> Int {
     return EmojiCategories.all.count
   }
 
-  func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+  func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
     return EmojiDataSource.shared[EmojiCategories.all[section]].count
   }
 
-  func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-    let cell = collectionView.dequeueReusableCellWithReuseIdentifier(
-      EmojiCollectionViewCell.cellReuseIdentifier,
-      forIndexPath: indexPath) as! EmojiCollectionViewCell
+  func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    let cell = collectionView.dequeueReusableCell(
+      withReuseIdentifier: EmojiCollectionViewCell.cellReuseIdentifier,
+      for: indexPath) as! EmojiCollectionViewCell
 
     let emoji = EmojiDataSource.shared[EmojiCategories.all[indexPath.section]][indexPath.item]
     cell.emojiLabel?.text = "\(emoji)"
@@ -147,18 +147,18 @@ class EmojiKeyboardViewController: UIViewController, UICollectionViewDelegate, U
   }
 
   // MARK: UICollectionViewDelegate
-  func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-    collectionView.deselectItemAtIndexPath(indexPath, animated: true)
+  func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    collectionView.deselectItem(at: indexPath, animated: true)
 
     let emoji = EmojiDataSource.shared[EmojiCategories.all[indexPath.section]][indexPath.item]
     delegate?.emojiKeyboardViewController(self, didPress: emoji)
   }
 
-  func collectionView(collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, atIndexPath indexPath: NSIndexPath) -> UICollectionReusableView {
-    let header = collectionView.dequeueReusableSupplementaryViewOfKind(
-      kind,
+  func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+    let header = collectionView.dequeueReusableSupplementaryView(
+      ofKind: kind,
       withReuseIdentifier: EmojiCollectionViewHeader.headerReuseIdentifier,
-      forIndexPath: indexPath) as! EmojiCollectionViewHeader
+      for: indexPath) as! EmojiCollectionViewHeader
 
     let category = EmojiCategories.all[indexPath.section].rawValue
     header.titleLabel?.text = category
@@ -167,29 +167,29 @@ class EmojiKeyboardViewController: UIViewController, UICollectionViewDelegate, U
   }
 
   // MARK: UICollectionViewDelegateFlowLayout
-  func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+  func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
     let category = EmojiCategories.all[section].rawValue
-    return category.getSizeWithFont(font: UIFont.systemFontOfSize(15))
+    return category.getSizeWithFont(font: UIFont.systemFont(ofSize: 15))
   }
 
   // MARK: HorizontalFloatingHeaderLayoutDelegate
-  func collectionView(collectionView: UICollectionView, horizontalFloatingHeaderItemSizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+  func collectionView(_ collectionView: UICollectionView, horizontalFloatingHeaderItemSizeForItemAtIndexPath indexPath: IndexPath) -> CGSize {
     return CGSize(width: 30, height: 30)
   }
 
-  func collectionView(collectionView: UICollectionView, horizontalFloatingHeaderSizeForSectionAtIndex section: Int) -> CGSize {
+  func collectionView(_ collectionView: UICollectionView, horizontalFloatingHeaderSizeForSectionAtIndex section: Int) -> CGSize {
     return CGSize(width: 80, height: 30)
   }
 
-  func collectionView(collectionView: UICollectionView, horizontalFloatingHeaderItemSpacingForSectionAtIndex section: Int) -> CGFloat {
+  func collectionView(_ collectionView: UICollectionView, horizontalFloatingHeaderItemSpacingForSectionAtIndex section: Int) -> CGFloat {
     return 8
   }
 
-  func collectionView(collectionView: UICollectionView, horizontalFloatingHeaderColumnSpacingForSectionAtIndex section: Int) -> CGFloat {
+  func collectionView(_ collectionView: UICollectionView, horizontalFloatingHeaderColumnSpacingForSectionAtIndex section: Int) -> CGFloat {
     return 8
   }
 
-  func collectionView(collectionView: UICollectionView, horizontalFloatingHeaderSectionInsetForSectionAtIndex section: Int) -> UIEdgeInsets {
+  func collectionView(_ collectionView: UICollectionView, horizontalFloatingHeaderSectionInsetForSectionAtIndex section: Int) -> UIEdgeInsets {
     return UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
   }
 }

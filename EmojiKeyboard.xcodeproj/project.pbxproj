@@ -132,6 +132,8 @@
 				TargetAttributes = {
 					B2D6EE6F1D74AF9900AFB3C4 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = PPXMAS423L;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -339,10 +341,12 @@
 			baseConfigurationReference = ADD92995CC1655361E3C6285 /* Pods-EmojiKeyboard.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = PPXMAS423L;
 				INFOPLIST_FILE = EmojiKeyboard/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.movielala.EmojiKeyboard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -351,10 +355,12 @@
 			baseConfigurationReference = 344099B47441F740BFE20D80 /* Pods-EmojiKeyboard.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = PPXMAS423L;
 				INFOPLIST_FILE = EmojiKeyboard/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.movielala.EmojiKeyboard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

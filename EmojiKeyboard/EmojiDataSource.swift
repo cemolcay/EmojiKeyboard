@@ -37,9 +37,9 @@ public class EmojiDataSource {
   private var dataSource = [String: [EmojiItem]]()
 
   public init() {
-    guard let emojiDataFileUrl = NSBundle.mainBundle().URLForResource("emoji", withExtension: "json"),
-      let emojiData = NSData(contentsOfURL: emojiDataFileUrl),
-      let emojiJSON = try? NSJSONSerialization.JSONObjectWithData(emojiData, options: .MutableContainers) as? [AnyObject],
+    guard let emojiDataFileUrl = Bundle.main.url(forResource: "emoji", withExtension: "json"),
+      let emojiData = try? Data(contentsOf: emojiDataFileUrl),
+      let emojiJSON = try? JSONSerialization.jsonObject(with: emojiData as Data, options: .mutableContainers) as? [AnyObject],
       let json = emojiJSON
      else { return }
 
@@ -50,7 +50,7 @@ public class EmojiDataSource {
         else { continue }
 
       var items = [EmojiItem]()
-      for item in data.componentsSeparatedByString(",") {
+      for item in data.components(separatedBy: ",") {
         items.append(EmojiItem(rawValue: item))
       }
 
